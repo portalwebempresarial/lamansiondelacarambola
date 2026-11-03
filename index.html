@@ -3,176 +3,1244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asesoría Personalizada - Cecilia Besso</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- OPTIMIZACIÓN SEO LOCAL -->
+    <title>La Mansión de la Carambola | Club de Billar 3 Bandas en Funza</title>
+    <meta name="description" content="El mejor club de billar a 3 bandas en Funza, Cundinamarca. Únete a nuestros torneos profesionales y aficionados. Visítanos en Cl 13 # 8-45.">
+    <meta name="keywords" content="billar, billar 3 bandas, torneos de billar, club de billar, Funza, Cundinamarca, carambola, La Mansión de la Carambola, billar Funza">
+    <meta name="author" content="La Mansión de la Carambola">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="La Mansión de la Carambola | Torneos de Billar 3 Bandas">
+    <meta property="og:description" content="Únete al torneo. El mejor nivel de billar a 3 bandas en Funza, Cundinamarca. Cl 13 # 8-45.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/khmurcia2/proyecto/main/logo%20mansion.jpeg">
+    <meta property="og:url" content="https://www.instagram.com/lamansiondelacarambola/">
+    <meta property="og:type" content="website">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsClub",
+      "name": "La Mansión de la Carambola",
+      "image": "https://raw.githubusercontent.com/khmurcia2/proyecto/main/logo%20mansion.jpeg",
+      "url": "https://www.instagram.com/lamansiondelacarambola/",
+      "telephone": "+573002158036",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cl 13 # 8-45",
+        "addressLocality": "Funza",
+        "addressRegion": "Cundinamarca",
+        "addressCountry": "CO"
+      },
+      "sameAs": [
+        "https://www.instagram.com/lamansiondelacarambola/"
+      ],
+      "sport": "Billar a 3 Bandas"
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        /* TEMA GLOBAL */
+        body { font-family: 'Montserrat', sans-serif; background: linear-gradient(rgba(10, 15, 20, 0.85), rgba(10, 15, 20, 0.95)), url('https://images.unsplash.com/photo-1599566219227-2efe0c9b7f5f?q=80&w=2000&auto=format&fit=crop') no-repeat center center fixed; background-size: cover; color: #ecf0f1; margin: 0; padding: 0; min-height: 100vh; display: flex; flex-direction: column; }
+        h2, h3 { text-align: center; color: #00d8d6; text-transform: uppercase; letter-spacing: 2px; }
+        h1.titulo-seccion { text-align: center; color: #00d8d6; text-transform: uppercase; letter-spacing: 2px; font-size: 2em; }
+        
+        .seo-h1-oculto { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+        /* LOGO HEADER */
+        .header-logo { text-align: center; padding: 20px 0 10px 0; }
+        .header-logo img { max-height: 130px; border-radius: 12px; border: 2px solid #00d8d6; box-shadow: 0 0 20px rgba(0, 216, 214, 0.6); transition: transform 0.3s; }
+        .header-logo img:hover { transform: scale(1.05); }
+
+        /* NAVEGACIÓN */
+        .navbar { background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(10px); padding: 15px; text-align: center; border-bottom: 1px solid rgba(0, 216, 214, 0.3); position: sticky; top: 0; z-index: 100; margin-top: 10px; }
+        .tab-btn { background-color: transparent; color: #ecf0f1; border: 2px solid #00d8d6; padding: 10px 20px; font-size: 15px; font-weight: 600; cursor: pointer; border-radius: 30px; margin: 5px; transition: all 0.3s ease; }
+        .tab-btn.activa, .tab-btn:hover { background-color: #00d8d6; color: #1e272e; box-shadow: 0 0 15px rgba(0, 216, 214, 0.6); }
+
+        /* CONTENEDORES */
+        .seccion { display: none; padding: 20px; max-width: 1100px; margin: 0 auto; animation: fadeIn 0.5s ease-in-out; flex-grow: 1; width: 100%; box-sizing: border-box; }
+        .seccion.activa { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .card { background: rgba(30, 39, 46, 0.75); backdrop-filter: blur(15px); padding: 25px; border-radius: 15px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 30px; }
+
+        /* FORMULARIOS */
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-weight: 600; margin-bottom: 5px; color: #00d8d6; font-size: 13px; text-transform: uppercase; }
+        input, select { width: 100%; padding: 12px; border: 1px solid rgba(255,255,255,0.2); background-color: rgba(0,0,0,0.5); color: white; border-radius: 8px; box-sizing: border-box; font-size: 15px; font-family: 'Montserrat', sans-serif; }
+        input[type="time"] { cursor: pointer; }
+        
+        .checkbox-container { display: flex; align-items: center; background: rgba(0,0,0,0.4); padding: 15px; border-radius: 8px; border: 1px solid rgba(0,216,214,0.3); cursor: pointer; }
+        .checkbox-container input { width: auto; margin-right: 15px; transform: scale(1.5); cursor: pointer; }
+        .checkbox-container label { margin-bottom: 0; font-size: 15px; color: #0be881; cursor: pointer; }
+
+        button.btn-accion { width: 100%; padding: 15px; background: linear-gradient(45deg, #05c46b, #0be881); color: #000; border: none; border-radius: 8px; font-size: 16px; font-weight: 800; text-transform: uppercase; cursor: pointer; transition: all 0.3s ease; }
+        button.btn-accion:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(11, 232, 129, 0.6); }
+
+        /* AVISOS */
+        .aviso-importante { background: rgba(232, 65, 24, 0.15); border-left: 5px solid #e84118; padding: 15px; margin-bottom: 25px; border-radius: 5px; }
+        .aviso-importante p { margin: 5px 0; color: #fff; font-size: 14px; line-height: 1.5; }
+        .aviso-importante a { color: #ffd32a; font-weight: 800; text-decoration: none; transition: 0.3s; }
+        .aviso-importante a:hover { color: #fff; text-shadow: 0 0 10px #ffd32a; }
+
+        /* TABLAS Y AVATARES */
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; background: rgba(0,0,0,0.4); border-radius: 8px; overflow: hidden; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05); vertical-align: middle; }
+        th { background-color: rgba(0, 216, 214, 0.2); color: #00d8d6; text-transform: uppercase; font-size: 12px; }
+        
+        .avatar { width: 45px; height: 45px; border-radius: 50%; object-fit: cover; margin-right: 10px; vertical-align: middle; background-color: transparent; filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.5)); }
+        .avatar-clic { cursor: pointer; transition: all 0.3s; }
+        .avatar-clic:hover { transform: scale(1.2); filter: drop-shadow(0px 0px 10px #0be881); }
+
+        .badge { padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 800; color: white; text-transform: uppercase; }
+        /* NUEVA CATEGORÍA SÚPER MASTER (NEGRO Y DORADO) */
+        .bg-supermaster { background: linear-gradient(45deg, #111111, #333333); color: #ffd32a; border: 1px solid #ffd32a; box-shadow: 0 0 5px rgba(255, 211, 42, 0.5); }
+        .bg-master { background: linear-gradient(45deg, #ff3f34, #ff5e57); }
+        .bg-intermedio { background: linear-gradient(45deg, #ffa801, #ffc048); }
+        .bg-normal { background: linear-gradient(45deg, #8e44ad, #9b59b6); }
+        .bg-amateur { background: linear-gradient(45deg, #0fbcf9, #4bcffa); }
+
+        /* MODAL DE EDICIÓN */
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 1000; justify-content: center; align-items: center; backdrop-filter: blur(5px); }
+        .modal-content { width: 90%; max-width: 500px; position: relative; }
+
+        /* TORNEO Y MESAS */
+        .controls-torneo { display: flex; gap: 15px; justify-content: center; align-items: flex-end; margin-bottom: 30px; background: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px; flex-wrap: wrap; }
+        .btn-sorteo { background: linear-gradient(45deg, #ffa801, #ffd32a); color: #000; border: none; padding: 12px 25px; font-size: 14px; font-weight: 800; border-radius: 8px; cursor: pointer; transition: 0.3s; }
+        .btn-sorteo:hover { transform: scale(1.05); box-shadow: 0 0 15px rgba(255, 211, 42, 0.6); }
+        .btn-terminar { background: linear-gradient(45deg, #ff3f34, #ff5e57); color: white; border: none; padding: 12px 25px; font-size: 14px; font-weight: 800; border-radius: 8px; cursor: pointer; display: none; transition: 0.3s; }
+        .btn-terminar:hover { box-shadow: 0 0 15px rgba(255, 63, 52, 0.8); }
+
+        .fase-grupos { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 25px; justify-items: center; }
+        .grupo { width: 100%; max-width: 450px; background: rgba(20, 25, 30, 0.8); border-top: 4px solid #00d8d6; border-radius: 10px; padding: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
+        .grupo h3 { margin-top: 0; color: #ffd32a; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; font-size: 18px; text-align: center; }
+        
+        .mesa-billar { width: 100%; box-sizing: border-box; background: url('https://www.transparenttextures.com/patterns/felt.png'), linear-gradient(to bottom, #006266, #004d40); border: 10px solid #5c2c16; border-radius: 10px; padding: 15px; padding-top: 35px; margin-bottom: 15px; box-shadow: inset 0 0 20px rgba(0,0,0,0.8); text-align: center; position: relative; }
+        .horario { position: absolute; top: 0; left: 50%; transform: translateX(-50%); background: #000; color: #ffd32a; padding: 4px 15px; font-size: 12px; font-weight: bold; border-radius: 0 0 8px 8px; letter-spacing: 1px; width: 80%; white-space: nowrap; border: 1px solid #ffd32a; border-top: none; }
+        
+        .jugador-mesa { display: flex; align-items: center; justify-content: space-between; background: rgba(0,0,0,0.6); padding: 8px; border-radius: 6px; margin: 5px 0; border-left: 3px solid #00d8d6; }
+        .jugador-info { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: bold; }
+        
+        .inputs-marcador { display: flex; justify-content: space-between; margin-top: 10px; gap: 10px; }
+        .input-score { width: 45%; text-align: center; font-size: 18px; font-weight: bold; background: rgba(255,255,255,0.9); color: #000; border-radius: 5px; border:none; }
+        .btn-guardar-score { background: #05c46b; border: none; color: white; width: 100%; padding: 8px; margin-top: 5px; border-radius: 5px; font-weight: bold; cursor: pointer; transition: 0.3s; text-transform: uppercase; }
+        .btn-guardar-score:hover { filter: brightness(1.1); box-shadow: 0 0 10px #05c46b; }
+        
+        /* BOTÓN CORREGIR SCORE */
+        .btn-corregir-score { background: transparent; border: 1px solid #ff3f34; color: #ff3f34; padding: 4px 10px; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; transition: 0.3s; }
+        .btn-corregir-score:hover { background: #ff3f34; color: #fff; }
+
+        .btn-fase-final { background: linear-gradient(45deg, #ff3f34, #ff5e57); color: white; padding: 15px; border: none; border-radius: 8px; font-size: 18px; font-weight: bold; cursor: pointer; width: 100%; margin-top: 20px; display: none; box-shadow: 0 5px 15px rgba(255, 63, 52, 0.4); text-transform: uppercase; }
+        
+        /* PLACA DE PREMIACIÓN */
+        .caja-premios { background: linear-gradient(45deg, rgba(255,215,0,0.1), rgba(255,215,0,0.3)); border: 2px solid #ffd32a; padding: 20px; border-radius: 12px; text-align: center; margin-bottom: 25px; display: none; box-shadow: 0 0 20px rgba(255,215,0,0.2); }
+        .caja-premios h2 { color: #ffd32a; margin: 0 0 15px 0; font-size: 26px; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
+        .caja-premios h3 { color: #fff; margin: 5px 0; font-size: 20px; }
+        .caja-premios span { color: #0be881; font-weight: 800; }
+        
+        /* --- LA VERDADERA RULETA FÍSICA ESTILO CASINO --- */
+        #ruletaSorteo { 
+            display: none; position: fixed; top:0; left:0; width:100vw; height:100vh; 
+            background: radial-gradient(circle at center, #1e272e 0%, #050505 100%); 
+            z-index: 999999; flex-direction: column; justify-content: flex-start; align-items: center; 
+            color: white; overflow: hidden; padding-top: 20px; box-sizing: border-box; 
+        }
+        
+        .ruleta-header { text-align: center; margin-bottom: 30px; }
+        .ruleta-titulo { font-size: 40px; color: #ffd32a; font-weight: 900; letter-spacing: 4px; text-shadow: 0 0 20px rgba(255, 211, 42, 0.6); margin: 0; }
+        .ruleta-subtitulo { font-size: 22px; color: #00d8d6; font-weight: bold; margin-top: 5px; }
+
+        .ruleta-wrapper { position: relative; width: 100%; max-width: 1000px; display: flex; justify-content: center; }
+
+        .ruleta-aguja-top { position: absolute; top: -45px; left: 50%; transform: translateX(-50%); color: #ff3f34; font-size: 70px; z-index: 100; text-shadow: 0 5px 15px rgba(0,0,0,1); }
+        .ruleta-aguja-bottom { position: absolute; bottom: -45px; left: 50%; transform: translateX(-50%); color: #ff3f34; font-size: 70px; z-index: 100; text-shadow: 0 -5px 15px rgba(0,0,0,1); }
+        .ruleta-linea-ganadora { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 6px; height: 100%; background: #ff3f34; z-index: 50; box-shadow: 0 0 20px #ff3f34; border-radius: 5px; }
+
+        .ruleta-ventana {
+            position: relative; width: 100%; height: 240px; background: #0d1117;
+            border: 6px solid #00d8d6; border-radius: 15px;
+            box-shadow: 0 15px 50px rgba(0,216,214,0.4), inset 0 0 60px rgba(0,0,0,1);
+            mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+            overflow: hidden;
+        }
+
+        .ruleta-carril { display: flex; align-items: center; height: 100%; width: max-content; transform: translateX(0px); will-change: transform; }
+
+        .ruleta-item {
+            width: 180px; min-width: 180px; height: 90%;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            background: linear-gradient(to bottom, #1e272e, #111);
+            border-left: 2px solid rgba(255,255,255,0.1); border-right: 2px solid rgba(255,255,255,0.1);
+            border-radius: 12px; margin: 0 5px; box-sizing: border-box; opacity: 0.6; transition: 0.4s ease;
+        }
+
+        .ruleta-item img {
+            width: 110px; height: 110px; border-radius: 50%; border: 4px solid #ccc;
+            margin-bottom: 12px; background: transparent; transition: 0.4s ease; 
+            filter: drop-shadow(0 5px 8px rgba(0,0,0,0.7));
+        }
+
+        .ruleta-item span { font-size: 18px; font-weight: 900; text-align: center; width: 95%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #fff; }
+
+        .ruleta-item.ganador { opacity: 1; background: linear-gradient(to bottom, #0be88133, #0be88166); border: 3px solid #0be881; z-index: 2; transform: scale(1.08); box-shadow: 0 0 30px rgba(11, 232, 129, 0.4); }
+        .ruleta-item.ganador img { border-color: #0be881; filter: drop-shadow(0 0 20px #0be881); }
+        .ruleta-item.ganador span { color: #0be881; text-shadow: 0 0 10px rgba(11,232,129,0.5); font-size: 20px; }
+
+        /* TABLERO DE RESULTADOS EN VIVO */
+        .ruleta-log-container { margin-top: 50px; display: flex; flex-direction: column; gap: 12px; width: 95%; max-width: 800px; padding-bottom: 50px; overflow-y: auto; max-height: 40vh; }
+        .ruleta-log-container::-webkit-scrollbar { width: 8px; }
+        .ruleta-log-container::-webkit-scrollbar-thumb { background: #00d8d6; border-radius: 10px; }
+        
+        .ruleta-log-item { background: rgba(0, 0, 0, 0.8); border: 2px solid #00d8d6; border-left: 10px solid #00d8d6; border-radius: 12px; padding: 15px 25px; display: flex; justify-content: space-between; align-items: center; animation: slideIn 0.5s ease-out forwards; box-shadow: 0 8px 20px rgba(0,0,0,0.6); }
+        @keyframes slideIn { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }
+        
+        .log-mesa-tag { color: #ffd32a; font-weight: 900; font-size: 20px; width: 130px; letter-spacing: 1px; }
+        .log-player { display: flex; align-items: center; gap: 15px; color: white; font-weight: 900; font-size: 18px; flex: 1; text-transform: uppercase; }
+        .log-player.right { flex-direction: row-reverse; text-align: right; }
+        .log-player img { width: 50px; height: 50px; border-radius: 50%; filter: drop-shadow(0 2px 5px rgba(0,0,0,0.8)); border: 2px solid #fff; }
+        .log-vs { color: #ff5e57; font-weight: 900; font-size: 24px; padding: 0 20px; text-shadow: 0 0 15px rgba(255, 94, 87, 0.8); }
+
+        .campeon-box { background: linear-gradient(45deg, #05c46b, #0be881); padding: 20px; border-radius: 10px; margin-top: 20px; text-align: center; color: #000; font-size: 24px; font-weight: 900; box-shadow: 0 0 25px rgba(11,232,129,0.8); animation: latido 1.5s infinite; }
+        @keyframes latido { 0% { transform: scale(1); } 50% { transform: scale(1.02); } 100% { transform: scale(1); } }
+
+        /* FOOTER SEO LOCAL */
+        .footer-seo { background: rgba(0,0,0,0.9); border-top: 2px solid #00d8d6; padding: 20px; text-align: center; font-size: 12px; color: #aaa; margin-top: auto; }
+        .footer-seo p { margin: 5px 0; }
+        .footer-seo a { color: #00d8d6; text-decoration: none; font-weight: bold; }
+        .footer-seo a:hover { text-decoration: underline; }
+
+        /* WHATSAPP FLOTANTE */
+        .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; border-radius: 50%; width: 60px; height: 60px; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 15px rgba(0,0,0,0.5); z-index: 1000; transition: transform 0.3s; }
+        .whatsapp-btn:hover { transform: scale(1.15); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6); }
+        .whatsapp-btn svg { width: 35px; height: 35px; fill: currentColor; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body>
 
-    <nav class="bg-white shadow-sm fixed w-full z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="font-bold text-2xl text-slate-800">Cecilia Besso</div>
-            <a href="#reserva" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-full transition duration-300">
-                Reservar Ahora
-            </a>
-        </div>
+    <h1 class="seo-h1-oculto">La Mansión de la Carambola - Torneo de Billar 3 Bandas en Funza</h1>
+
+    <a href="https://wa.me/573002158036" class="whatsapp-btn" target="_blank" title="Contactar Organizador">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+          <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c-.003 1.396.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c.004-3.623 2.953-6.57 6.577-6.57a6.59 6.59 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.572 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+        </svg>
+    </a>
+
+    <!-- NUEVO LOGO EN EL ENCABEZADO -->
+    <header class="header-logo">
+        <img src="https://raw.githubusercontent.com/khmurcia2/proyecto/main/logo%20mansion.jpeg" alt="Logo de La Mansión de la Carambola - Club de Billar en Funza">
+    </header>
+
+    <nav class="navbar">
+        <button class="tab-btn activa" id="tab-inscripcion" onclick="cambiarPestana('inscripcion', this)">📝 Registro Oficial</button>
+        <button class="tab-btn" id="tab-torneo" onclick="cambiarPestana('torneo', this)">🎱 Iniciar Torneo</button>
+        <button class="tab-btn" id="tab-finales" onclick="cambiarPestana('finales', this)">🏆 Muerte Súbita</button>
     </nav>
 
-    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Fondo de asesoría" class="w-full h-full object-cover opacity-20">
-            <div class="absolute inset-0 bg-slate-900 bg-opacity-70"></div>
+    <!-- PANTALLA DE LA RULETA EN VIVO FÍSICA -->
+    <div id="ruletaSorteo">
+        <div class="ruleta-header">
+            <div class="ruleta-titulo" id="ruletaMesa">MESA 1</div>
+            <div class="ruleta-subtitulo" id="ruletaSub">Sorteando Jugador...</div>
         </div>
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                Encuentra el camino hacia el <span class="text-blue-400">bienestar familiar y personal</span>
-            </h1>
-            <p class="mt-4 text-xl text-gray-200 max-w-3xl mx-auto mb-10">
-                Asesoramiento especializado en prevención, desarrollo personal y dinámicas familiares. Da el primer paso hacia una vida con mayor claridad y propósito.
-            </p>
-            <a href="#reserva" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold text-lg py-4 px-10 rounded-full shadow-lg transform transition hover:-translate-y-1">
-                Quiero agendar mi sesión
-            </a>
-            <p class="mt-4 text-sm text-gray-300">Cupos limitados este mes. 100% Confidencial.</p>
-        </div>
-    </section>
-
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-slate-800">¿Cómo puede ayudarte esta asesoría?</h2>
-                <div class="h-1 w-20 bg-blue-600 mx-auto mt-4"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="bg-gray-50 rounded-xl p-8 shadow-sm border border-gray-100 text-center hover:shadow-md transition">
-                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-3">Dinámicas Familiares</h3>
-                    <p class="text-gray-600">Herramientas prácticas para mejorar la comunicación, resolver conflictos y reconstruir la confianza en el hogar.</p>
-                </div>
-                <div class="bg-gray-50 rounded-xl p-8 shadow-sm border border-gray-100 text-center hover:shadow-md transition">
-                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-3">Prevención y Orientación</h3>
-                    <p class="text-gray-600">Apoyo profesional enfocado en la prevención de conductas de riesgo y acompañamiento emocional profundo.</p>
-                </div>
-                <div class="bg-gray-50 rounded-xl p-8 shadow-sm border border-gray-100 text-center hover:shadow-md transition">
-                    <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-3">Desarrollo Personal</h3>
-                    <p class="text-gray-600">Encuentra tu propio centro, maneja la ansiedad y recupera el control de tus decisiones con un plan estructurado.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-slate-50 border-t border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-slate-800">El proceso para tener tu asesoría</h2>
-                <p class="text-gray-500 mt-4">Simple, rápido y 100% seguro.</p>
-            </div>
-            <div class="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 md:space-x-8">
-                <div class="flex-1 text-center">
-                    <div class="w-20 h-20 bg-white border-4 border-blue-600 rounded-full flex items-center justify-center text-2xl font-bold text-blue-600 mx-auto mb-4 shadow-sm">1</div>
-                    <h4 class="text-lg font-bold text-slate-800">Elige tu horario</h4>
-                    <p class="text-gray-600 mt-2 text-sm">Selecciona en el calendario la fecha y hora que mejor se adapte a tu rutina.</p>
-                </div>
-                <div class="hidden md:block w-16 h-1 bg-gray-300"></div>
-                <div class="flex-1 text-center">
-                    <div class="w-20 h-20 bg-white border-4 border-blue-600 rounded-full flex items-center justify-center text-2xl font-bold text-blue-600 mx-auto mb-4 shadow-sm">2</div>
-                    <h4 class="text-lg font-bold text-slate-800">Realiza tu reserva</h4>
-                    <p class="text-gray-600 mt-2 text-sm">Completa tus datos y procesa el pago a través de nuestra plataforma segura.</p>
-                </div>
-                <div class="hidden md:block w-16 h-1 bg-gray-300"></div>
-                <div class="flex-1 text-center">
-                    <div class="w-20 h-20 bg-blue-600 border-4 border-blue-600 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4 shadow-sm">3</div>
-                    <h4 class="text-lg font-bold text-slate-800">Conéctate a la sesión</h4>
-                    <p class="text-gray-600 mt-2 text-sm">Recibirás un enlace exclusivo para acceder a tu videollamada con Cecilia.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-slate-800">Historias de Transformación</h2>
-                <div class="h-1 w-20 bg-blue-600 mx-auto mt-4"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100">
-                    <div class="flex text-yellow-400 mb-4">
-                        ★★★★★
-                    </div>
-                    <p class="text-gray-600 italic mb-6">"La asesoría con Cecilia cambió por completo la dinámica en nuestra casa. Estábamos atravesando una crisis severa y su enfoque directo pero empático nos dio la hoja de ruta que necesitábamos."</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-gray-300 rounded-full mr-4"></div>
-                        <div>
-                            <p class="font-bold text-slate-800 text-sm">María Fernanda R.</p>
-                            <p class="text-gray-500 text-xs">Madre de familia</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100">
-                    <div class="flex text-yellow-400 mb-4">
-                        ★★★★★
-                    </div>
-                    <p class="text-gray-600 italic mb-6">"Acudí a Cecilia buscando orientación preventiva y salí con herramientas que aplicó todos los días. Su nivel de profesionalismo es increíble, te hace sentir escuchado y validado."</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-gray-300 rounded-full mr-4"></div>
-                        <div>
-                            <p class="font-bold text-slate-800 text-sm">Carlos M.</p>
-                            <p class="text-gray-500 text-xs">Profesional independiente</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100">
-                    <div class="flex text-yellow-400 mb-4">
-                        ★★★★★
-                    </div>
-                    <p class="text-gray-600 italic mb-6">"Llevaba meses sintiéndome estancada. La sesión fue un punto de inflexión. Hablar con alguien con tanta experiencia te ahorra años de frustración. Totalmente recomendado."</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-gray-300 rounded-full mr-4"></div>
-                        <div>
-                            <p class="font-bold text-slate-800 text-sm">Andrea V.</p>
-                            <p class="text-gray-500 text-xs">Emprendedora</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="reserva" class="py-24 bg-slate-900 text-center px-4">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">¿Listo para transformar tu realidad?</h2>
-            <p class="text-xl text-gray-300 mb-10">Agenda tu asesoría hoy y da el primer paso hacia la tranquilidad que tú y los tuyos merecen.</p>
+        
+        <div class="ruleta-wrapper">
+            <div class="ruleta-aguja-top">▼</div>
+            <div class="ruleta-linea-ganadora"></div>
             
-            <div class="bg-white p-8 rounded-2xl shadow-2xl max-w-2xl mx-auto">
-                <h3 class="text-2xl font-bold text-slate-800 mb-6">Selecciona tu cita</h3>
-                <div class="border-2 border-dashed border-gray-300 rounded-lg h-64 flex flex-col items-center justify-center bg-gray-50">
-                    <svg class="w-12 h-12 text-gray-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                    <p class="text-gray-500 font-medium">[[ Insertar Widget de Reserva Aquí ]]</p>
-                    <p class="text-xs text-gray-400 mt-2">(Ej: Script de Calendly, Turnotap o enlace de pago)</p>
-                </div>
-                
-                <button class="w-full mt-6 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl transition duration-300 shadow-lg">
-                    Confirmar Reserva y Proceder al Pago
-                </button>
+            <div class="ruleta-ventana" id="ruletaContenedor">
+                <div class="ruleta-carril" id="ruletaCarril"></div>
             </div>
+            
+            <div class="ruleta-aguja-bottom">▲</div>
+        </div>
+
+        <div class="ruleta-log-container" id="ruletaLog"></div>
+    </div>
+
+    <!-- MODAL DE EDICIÓN Y ELIMINACIÓN DE JUGADORES PROTEGIDO CON CLAVE -->
+    <div id="modalEdicion" class="modal-overlay">
+        <div class="card modal-content">
+            <h2 style="margin-top: 0; color: #ffd32a;">✏️ Gestionar Jugador</h2>
+            <form id="formEdicion">
+                <input type="hidden" id="editId">
+                <div class="form-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" id="editNombre" required>
+                </div>
+                <div class="form-group">
+                    <label>Categoría</label>
+                    <select id="editCategoria" required>
+                        <!-- Las opciones se inyectan via JS -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="editPagado">
+                        <label for="editPagado">Inscripción Pagada (Al día)</label>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 10px; margin-top: 25px; flex-wrap: wrap;">
+                    <button type="submit" class="btn-accion" style="flex: 1; min-width: 120px;">💾 Guardar</button>
+                    <button type="button" class="btn-accion" style="flex: 1; min-width: 120px; background: linear-gradient(45deg, #e74c3c, #c0392b);" onclick="eliminarJugador()">🗑️ Eliminar</button>
+                    <button type="button" class="btn-accion" style="flex: 1; min-width: 120px; background: #7f8c8d; box-shadow: none;" onclick="cerrarModalEdicion()">❌ Cerrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 1: INSCRIPCIÓN -->
+    <section id="seccion-inscripcion" class="seccion activa">
+        <h1 class="titulo-seccion">Inscripción al Torneo</h1>
+        <article class="card">
+            
+            <div class="aviso-importante">
+                <p>⚠️ <strong>IMPORTANTE:</strong> La categoría seleccionada debe ser previamente consultada y autorizada por la administración.</p>
+                <p>💵 <strong>PAGOS:</strong> Solo se puede marcar "Al día" si <strong>FREDY</strong> confirma por interno el recibido del comprobante.</p>
+                <p>🚫 <strong>CUPOS:</strong> El día del torneo NO se asegura puesto si previamente ya están los cupos llenos.</p>
+                <p>📌 <strong>REQUISITO:</strong> Seguir nuestra cuenta oficial: <a href="https://www.instagram.com/lamansiondelacarambola/" target="_blank">@lamansiondelacarambola</a></p>
+            </div>
+
+            <form id="registroForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" placeholder="Ej. Torbjörn Blomdahl" required>
+                </div>
+                <div class="form-group">
+                    <label for="categoria">Categoría Asignada (Sujeta a Verificación)</label>
+                    <select id="categoria" required>
+                        <!-- Se autocompleta con JS -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="pagado">
+                        <label for="pagado">Inscripción Pagada (Al día)</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn-accion" id="btnGuardar">Registrar Jugador</button>
+            </form>
+        </article>
+
+        <article class="card">
+            <h2>Participantes Registrados (<span id="contador" style="color: #00d8d6;">0</span>)</h2>
+            <p style="text-align: center; color: #aaa; font-size: 14px;">Aptos para el sorteo: <strong id="contadorAptos" style="color:#0be881;">0</strong><br><em>(Haz clic en la foto de un jugador para editar o <b>eliminar</b>)</em></p>
+            <table>
+                <thead><tr><th>Jugador</th><th>Nivel</th><th>Meta</th><th style="text-align: center;">Estado</th></tr></thead>
+                <tbody id="listaJugadores"></tbody>
+            </table>
+        </article>
+    </section>
+
+    <!-- SECCIÓN 2: INICIAR TORNEO -->
+    <section id="seccion-torneo" class="seccion">
+        <article class="card" id="panelConfiguracion" style="border-top: 5px solid #00d8d6;">
+            <h2 style="color: #00d8d6; margin-top:0;">⚙️ Configuración del Torneo</h2>
+            
+            <div class="form-group" style="margin-bottom: 25px;">
+                <label style="color: #ffd32a; font-size: 16px;">Selecciona la Modalidad</label>
+                <select id="tipoTorneoConfig" style="border-color: #ffd32a; font-weight: bold;">
+                    <option value="matamata" selected>⚡ Mata Mata (Eliminación Directa Relámpago desde el inicio)</option>
+                    <option value="clasico">🏆 Torneo Clásico (Fase de Grupos + Eliminación)</option>
+                </select>
+                <p style="color: #aaa; font-size: 12px; margin-top: 5px;">* Las metas de carambolas se ajustarán automáticamente según tu elección.</p>
+            </div>
+
+            <div class="controls-torneo" style="background: none; padding:0; margin:0; justify-content: space-between;">
+                <div class="form-group" style="width: 25%;">
+                    <label>Hora Inicio</label>
+                    <input type="time" id="horaInicio" value="18:00">
+                </div>
+                <div class="form-group" style="width: 35%;">
+                    <label>Premio Campeón 🥇</label>
+                    <input type="text" id="inPremio1" placeholder="Ej: $500.000 + Trofeo">
+                </div>
+                <div class="form-group" style="width: 35%;">
+                    <label>Premio Subcampeón 🥈</label>
+                    <input type="text" id="inPremio2" placeholder="Ej: $200.000">
+                </div>
+            </div>
+            <button class="btn-sorteo" id="btnSorteo" style="width: 100%; margin-top: 15px; padding: 15px; font-size: 18px;">🎲 Iniciar Sorteo Oficial con Ruleta</button>
+        </article>
+
+        <div style="text-align: center; margin-bottom: 20px;">
+            <button class="btn-terminar" id="btnTerminarTorneo" onclick="terminarTorneoOficial()">🛑 Finalizar Torneo Actual y Limpiar Sistema</button>
+        </div>
+
+        <div class="fase-grupos" id="contenedorGrupos"></div>
+        <button class="btn-sorteo" id="btnGenerarFinales" onclick="generarFaseFinal()" style="width: 100%; display: none; margin-top: 20px; padding: 15px; font-size: 16px;">🏆 Finalizar Grupos e Iniciar Muerte Súbita</button>
+    </section>
+
+    <!-- SECCIÓN 3: FASE FINAL -->
+    <section id="seccion-finales" class="seccion">
+        <article class="caja-premios" id="placaPremiacion">
+            <h2>💰 BOTÍN DEL TORNEO 💰</h2>
+            <h3>🥇 Campeón: <span id="txtPremio1"></span></h3>
+            <h3 style="font-size: 16px; color:#ccc;">🥈 Subcampeón: <span id="txtPremio2"></span></h3>
+        </article>
+
+        <h1 class="titulo-seccion">Cuadro de Muerte Súbita</h1>
+        <div id="contenedorFinales">
+            <p style="text-align: center; width: 100%;">La fase final se construirá aquí automáticamente.</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <button class="btn-sorteo" id="btnSiguienteRonda" style="display: none; padding: 15px 30px; font-size: 18px;" onclick="sortearSiguienteRonda()">🎲 Sortear Siguiente Ronda en Vivo</button>
         </div>
     </section>
 
-    <footer class="bg-slate-950 text-gray-400 py-8 text-center text-sm">
-        <p>&copy; 2026 Cecilia Besso. Todos los derechos reservados.</p>
+    <!-- FOOTER SEO LOCAL -->
+    <footer class="footer-seo">
+        <p><strong>La Mansión de la Carambola</strong> | Club de Billar a 3 Bandas</p>
+        <p>📍 Cl 13 # 8-45, Funza, Cundinamarca, Colombia</p>
+        <p>📱 Síguenos en <a href="https://www.instagram.com/lamansiondelacarambola/" target="_blank">Instagram</a> para más torneos de billar.</p>
     </footer>
 
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+        import { getFirestore, collection, addDoc, onSnapshot, query, orderBy, doc, setDoc, getDoc, updateDoc, deleteDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+
+        // ¡RECUERDA PONER TUS CLAVES EXACTAS DE FIREBASE AQUÍ!
+        const firebaseConfig = {
+            apiKey: "AIzaSyB10yXxA6Oyvz-xDyJuX7RKj7QhNju85mo",
+            authDomain: "mansioncarambola.firebaseapp.com",
+            projectId: "mansioncarambola",
+            storageBucket: "mansioncarambola.firebasestorage.app",
+            messagingSenderId: "782227033522",
+            appId: "1:782227033522:web:70f029b38617dfff21a8ab",
+            measurementId: "G-MKBCHYQ86T"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // --- REGLAS (AÑADIDA CATEGORÍA SÚPER MASTER) ---
+        const colorClases = { "Super Master": "bg-supermaster", "Master": "bg-master", "Intermedio": "bg-intermedio", "Normal": "bg-normal", "Amateur": "bg-amateur" };
+        const metasClasico = { "Super Master": 35, "Master": 25, "Intermedio": 20, "Normal": 15, "Amateur": 12 };
+        const metasMataMata = { "Super Master": 18, "Master": 12, "Intermedio": 9, "Normal": 7, "Amateur": 5 };
+
+        window.inscritosGlobal = [];
+        window.grupos = [];
+        window.faseEliminacion = { rondas: [], rondaActiva: 0, campeon: null };
+        window.torneoActivo = false;
+        window.tipoTorneo = 'matamata'; 
+        window.premiacion = { primero: "", segundo: "" };
+        window.ultimaHoraGlobal = "18:00";
+
+        function getMeta(categoria) { return window.tipoTorneo === 'matamata' ? metasMataMata[categoria] : metasClasico[categoria]; }
+
+        window.actualizarSelectsCategorias = function() {
+            const selects = [document.getElementById('categoria'), document.getElementById('editCategoria')];
+            selects.forEach(sel => {
+                if(!sel) return;
+                let val = sel.value;
+                sel.innerHTML = `
+                    <option value="">Selecciona el nivel...</option>
+                    <option value="Super Master">🌟 Súper Master (Meta: ${getMeta('Super Master')})</option>
+                    <option value="Master">⭐ Master (Meta: ${getMeta('Master')})</option>
+                    <option value="Intermedio">⚡ Intermedio (Meta: ${getMeta('Intermedio')})</option>
+                    <option value="Normal">🟢 Normal (Meta: ${getMeta('Normal')})</option>
+                    <option value="Amateur">🎯 Amateur (Meta: ${getMeta('Amateur')})</option>
+                `;
+                sel.value = val;
+            });
+        };
+        window.actualizarSelectsCategorias();
+
+        function generarAvatarBillar(nombre) {
+            if(!nombre) nombre = "X";
+            let charCode = 0;
+            for(let i=0; i<nombre.length; i++) charCode += nombre.charCodeAt(i);
+            
+            const tipo = charCode % 3; 
+            let colorBase;
+            if(tipo === 0) colorBase = '#f5f6fa'; else if(tipo === 1) colorBase = '#fbc531'; else colorBase = '#e84118';
+            let inicial = nombre.charAt(0).toUpperCase();
+
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <defs>
+                    <radialGradient id="luz_${tipo}_${charCode}" cx="30%" cy="30%" r="70%">
+                        <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+                        <stop offset="40%" stop-color="${colorBase}" stop-opacity="1"/>
+                        <stop offset="100%" stop-color="${tipo===0?'#dcdde1':tipo===1?'#e1b12c':'#c23616'}" stop-opacity="1"/>
+                    </radialGradient>
+                    <radialGradient id="sombra_${charCode}" cx="50%" cy="50%" r="50%">
+                        <stop offset="70%" stop-color="#000" stop-opacity="0"/>
+                        <stop offset="100%" stop-color="#000" stop-opacity="0.7"/>
+                    </radialGradient>
+                </defs>
+                <circle cx="50" cy="50" r="48" fill="url(#luz_${tipo}_${charCode})"/>
+                ${tipo !== 2 ? `
+                    <circle cx="50" cy="12" r="5" fill="#e84118"/><circle cx="83" cy="69" r="5" fill="#e84118"/><circle cx="17" cy="69" r="5" fill="#e84118"/>
+                ` : `
+                    <circle cx="50" cy="12" r="5" fill="#fbc531"/><circle cx="83" cy="69" r="5" fill="#fbc531"/><circle cx="17" cy="69" r="5" fill="#fbc531"/>
+                `}
+                <circle cx="50" cy="50" r="48" fill="url(#sombra_${charCode})"/>
+                <circle cx="50" cy="50" r="20" fill="#ffffff" opacity="0.9"/>
+                <circle cx="50" cy="50" r="20" fill="none" stroke="#ccc" stroke-width="1"/>
+                <text x="50" y="57" font-family="Montserrat, Arial, sans-serif" font-weight="900" font-size="22" fill="#2f3640" text-anchor="middle">${inicial}</text>
+            </svg>`;
+            return `data:image/svg+xml;base64,${btoa(unescape(encodeURIComponent(svg)))}`;
+        }
+
+        async function guardarEstadoTorneo() {
+            try { 
+                const datosLimpios = JSON.parse(JSON.stringify({ 
+                    activo: window.torneoActivo, tipoTorneo: window.tipoTorneo,
+                    grupos: window.grupos, faseEliminacion: window.faseEliminacion, 
+                    premiacion: window.premiacion, ultimaHora: window.ultimaHoraGlobal
+                }));
+                await setDoc(doc(db, "torneos", "actual"), datosLimpios); 
+            } catch (error) { console.error("Error al guardar estado:", error); }
+        }
+
+        async function cargarEstadoTorneo() {
+            try {
+                const docSnap = await getDoc(doc(db, "torneos", "actual"));
+                if (docSnap.exists()) {
+                    const data = docSnap.data();
+                    window.torneoActivo = data.activo || false;
+                    
+                    if(window.torneoActivo) {
+                        window.tipoTorneo = data.tipoTorneo || 'matamata';
+                        window.actualizarSelectsCategorias(); 
+
+                        window.grupos = data.grupos || [];
+                        window.faseEliminacion = data.faseEliminacion || { rondas: [], rondaActiva: 0, campeon: null };
+                        window.premiacion = data.premiacion || { primero: "", segundo: "" };
+                        window.ultimaHoraGlobal = data.ultimaHora || "18:00";
+                        
+                        document.getElementById('panelConfiguracion').style.display = 'none';
+                        document.getElementById('btnTerminarTorneo').style.display = 'inline-block';
+                        document.getElementById('tipoTorneoConfig').value = window.tipoTorneo;
+                        mostrarPremiacion();
+
+                        let tieneFinales = window.faseEliminacion.rondas && window.faseEliminacion.rondas.length > 0;
+
+                        if(window.tipoTorneo === 'clasico') {
+                            if (window.grupos.length > 0) { 
+                                renderizarGrupos(); 
+                                document.getElementById('btnGenerarFinales').style.display = tieneFinales ? 'none' : 'block';
+                            }
+                            if (tieneFinales) { 
+                                renderizarFaseFinal(); 
+                                setTimeout(() => { cambiarPestana('finales', document.getElementById('tab-finales')); }, 200);
+                            } else if (window.grupos.length > 0) {
+                                setTimeout(() => { cambiarPestana('torneo', document.getElementById('tab-torneo')); }, 200);
+                            }
+                        } else {
+                            document.getElementById('contenedorGrupos').innerHTML = '<h3 style="color:#aaa;">Modo MATA MATA Activo. Continúa en la pestaña de Muerte Súbita.</h3>';
+                            document.getElementById('btnGenerarFinales').style.display = 'none';
+                            renderizarFaseFinal();
+                            setTimeout(() => { cambiarPestana('finales', document.getElementById('tab-finales')); }, 200);
+                        }
+                    }
+                }
+            } catch (error) { console.error("Error al cargar torneo:", error); }
+        }
+        cargarEstadoTorneo();
+
+        window.terminarTorneoOficial = async function() {
+            const password = prompt("Seguridad del Sistema:\nIngrese la contraseña de administrador para finalizar el torneo:");
+            if (password !== "2026*") { alert("❌ Contraseña incorrecta."); return; }
+            if(confirm("¡ATENCIÓN! ¿Seguro que deseas finalizar el torneo?\nEsto limpiará el cuadro por completo y ELIMINARÁ A TODOS LOS JUGADORES INSCRITOS para el próximo evento.")) {
+                window.torneoActivo = false; window.grupos = []; window.faseEliminacion = { rondas: [], rondaActiva: 0, campeon: null };
+                
+                try {
+                    const querySnapshot = await getDocs(collection(db, "jugadores"));
+                    const promesasDeBorrado = [];
+                    querySnapshot.forEach((documento) => {
+                        promesasDeBorrado.push(deleteDoc(doc(db, "jugadores", documento.id)));
+                    });
+                    await Promise.all(promesasDeBorrado);
+                } catch(e) {
+                    console.error("Error limpiando los jugadores para el nuevo torneo", e);
+                }
+
+                await guardarEstadoTorneo(); 
+                location.reload(); 
+            }
+        };
+
+        window.cambiarPestana = function(idSeccion, botonRef) {
+            document.querySelectorAll('.seccion').forEach(sec => sec.classList.remove('activa'));
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('activa'));
+            document.getElementById(`seccion-${idSeccion}`).classList.add('activa');
+            botonRef.classList.add('activa');
+        };
+
+        document.getElementById('tipoTorneoConfig').addEventListener('change', function(e) {
+            window.tipoTorneo = e.target.value;
+            window.actualizarSelectsCategorias(); 
+            window.renderizarTablaInscritos();    
+        });
+
+        window.renderizarTablaInscritos = function() {
+            const tbody = document.getElementById('listaJugadores'); 
+            tbody.innerHTML = ''; 
+            let aptosParaSorteo = 0;
+            
+            window.inscritosGlobal.forEach((data) => {
+                if (data.pagado) aptosParaSorteo++;
+                const iconoEstado = data.pagado ? '<span style="color: #0be881; font-size: 20px;" title="Pagado">✅</span>' : '<span style="color: #ff3f34; font-size: 20px;" title="Debe inscripción">❌</span>';
+                
+                tbody.innerHTML += `<tr>
+                    <td><div style="display:flex; align-items:center;">
+                        <img src="${data.foto}" class="avatar avatar-clic" onclick="abrirModalEdicion('${data.id}')" title="Clic para editar o eliminar"> 
+                        <strong>${data.nombre}</strong>
+                    </div></td>
+                    <td><span class="badge ${data.claseColor}">${data.categoria}</span></td>
+                    <td><strong style="color: #ffd32a; font-size: 16px;">${getMeta(data.categoria)}</strong></td>
+                    <td style="text-align: center;">${iconoEstado}</td>
+                </tr>`;
+            });
+            document.getElementById('contador').textContent = window.inscritosGlobal.length;
+            document.getElementById('contadorAptos').textContent = aptosParaSorteo;
+        }
+
+        document.getElementById('registroForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('btnGuardar'); btn.disabled = true; btn.textContent = 'Guardando...';
+            const nombre = document.getElementById('nombre').value;
+            const categoria = document.getElementById('categoria').value;
+            const pagado = document.getElementById('pagado').checked; 
+            const avatarUrl = generarAvatarBillar(nombre);
+            try {
+                await addDoc(collection(db, "jugadores"), { nombre, categoria, pagado, foto: avatarUrl, claseColor: colorClases[categoria], fechaRegistro: new Date() });
+                this.reset();
+            } catch (error) { alert("Error al guardar: Verifique el formato."); } finally { btn.disabled = false; btn.textContent = 'Registrar Jugador'; }
+        });
+
+        // ==========================================
+        // 🔒 SISTEMA DE SEGURIDAD PARA EDICIÓN / ELIMINACIÓN
+        // ==========================================
+        window.abrirModalEdicion = function(id) {
+            const password = prompt("🔒 Seguridad del Sistema:\nIngrese la contraseña de administrador para editar o eliminar a este jugador:");
+            if (password !== "2026*") { 
+                alert("❌ Contraseña incorrecta. Solo el administrador tiene permiso para esta acción."); 
+                return; 
+            }
+
+            const jugador = window.inscritosGlobal.find(j => j.id === id);
+            if (!jugador) return;
+            document.getElementById('editId').value = jugador.id;
+            document.getElementById('editNombre').value = jugador.nombre;
+            document.getElementById('editCategoria').value = jugador.categoria;
+            document.getElementById('editPagado').checked = jugador.pagado || false;
+            document.getElementById('modalEdicion').style.display = 'flex';
+        };
+
+        window.cerrarModalEdicion = function() { document.getElementById('modalEdicion').style.display = 'none'; };
+
+        document.getElementById('formEdicion').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const id = document.getElementById('editId').value;
+            const nombre = document.getElementById('editNombre').value;
+            const categoria = document.getElementById('editCategoria').value;
+            const pagado = document.getElementById('editPagado').checked;
+            const avatarUrl = generarAvatarBillar(nombre);
+            try {
+                await updateDoc(doc(db, "jugadores", id), { nombre, categoria, pagado, foto: avatarUrl, claseColor: colorClases[categoria] });
+                cerrarModalEdicion();
+            } catch(error) { alert("Error al actualizar: " + error.message); }
+        });
+
+        window.eliminarJugador = async function() {
+            const id = document.getElementById('editId').value;
+            const nombre = document.getElementById('editNombre').value;
+            if(confirm(`⚠️ ¿Deseas ELIMINAR a ${nombre}?\nEsta acción no se puede deshacer.`)) {
+                try {
+                    await deleteDoc(doc(db, "jugadores", id));
+                    cerrarModalEdicion();
+                } catch(error) { alert("Error al eliminar al jugador."); }
+            }
+        };
+
+        onSnapshot(query(collection(db, "jugadores"), orderBy("fechaRegistro", "desc")), (snapshot) => {
+            window.inscritosGlobal = []; 
+            snapshot.forEach((docSnap) => {
+                const data = docSnap.data(); 
+                let fotoFinal = data.foto;
+                if(!fotoFinal || fotoFinal.includes('dicebear')) {
+                    fotoFinal = generarAvatarBillar(data.nombre);
+                    updateDoc(doc(db, "jugadores", docSnap.id), { foto: fotoFinal }).catch(e => console.log(e));
+                }
+                window.inscritosGlobal.push({ id: docSnap.id, ...data, foto: fotoFinal });
+            });
+            window.renderizarTablaInscritos();
+        });
+
+        // --- FUNCIONES DE TIEMPO Y AUDIO ---
+        const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+        function sumarMinutos(hora24, minutos) {
+            if(!hora24) hora24 = "18:00";
+            const [h, m] = hora24.split(':').map(Number);
+            const d = new Date(); d.setHours(h, m + minutos, 0);
+            return `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`;
+        }
+        function formatoAMPM(hora24) {
+            if(!hora24) return "";
+            let [h, m] = hora24.split(':').map(Number);
+            let ampm = h >= 12 ? 'PM' : 'AM';
+            h = h % 12 || 12;
+            return `${h}:${String(m).padStart(2, '0')} ${ampm}`;
+        }
+        function obtenerMinutos(hora24) { let [h, m] = hora24.split(':').map(Number); return h * 60 + m; }
+
+        function playTick() {
+            try {
+                const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                const osc = audioCtx.createOscillator(); const gain = audioCtx.createGain();
+                osc.type = 'triangle'; osc.frequency.setValueAtTime(800, audioCtx.currentTime);
+                gain.gain.setValueAtTime(0.1, audioCtx.currentTime); gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.05);
+                osc.connect(gain); gain.connect(audioCtx.destination); osc.start(); osc.stop(audioCtx.currentTime + 0.05);
+            } catch(e) {}
+        }
+        function playFanfare() {
+            try {
+                const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                [523.25, 659.25, 783.99, 1046.50].forEach((freq, i) => {
+                    const osc = audioCtx.createOscillator(); const gain = audioCtx.createGain();
+                    osc.type = 'sine'; osc.frequency.setValueAtTime(freq, audioCtx.currentTime + i * 0.1);
+                    gain.gain.setValueAtTime(0.15, audioCtx.currentTime + i * 0.1); gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + i * 0.1 + 0.3);
+                    osc.connect(gain); gain.connect(audioCtx.destination); osc.start(audioCtx.currentTime + i * 0.1); osc.stop(audioCtx.currentTime + i * 0.1 + 0.3);
+                });
+            } catch(e) {}
+        }
+
+        // --- ANIMACIÓN DE LA RULETA FÍSICA ---
+        async function animarRuleta(subtituloTexto, jugadorElegido, poolRestante) {
+            return new Promise(async (resolve) => {
+                try {
+                    const track = document.getElementById('ruletaCarril');
+                    const contenedor = document.getElementById('ruletaContenedor');
+                    document.getElementById('ruletaSub').textContent = subtituloTexto;
+                    
+                    track.style.transition = 'none'; 
+                    track.style.transform = 'translateX(0px)';
+
+                    let itemsHTML = '';
+                    const totalItems = 60; 
+                    const winnerIndex = 50; 
+                    const itemWidth = 190; 
+
+                    for(let i = 0; i < totalItems; i++) {
+                        let j;
+                        if(i === winnerIndex) {
+                            j = jugadorElegido;
+                        } else {
+                            if(poolRestante.length > 1) {
+                                j = poolRestante[Math.floor(Math.random() * poolRestante.length)];
+                                while(j.id === jugadorElegido.id && poolRestante.length > 1) {
+                                    j = poolRestante[Math.floor(Math.random() * poolRestante.length)];
+                                }
+                            } else {
+                                j = { foto: generarAvatarBillar('?'), nombre: 'Último...' };
+                            }
+                        }
+                        if(!j) j = { foto: generarAvatarBillar('X'), nombre: 'Desconocido' };
+                        itemsHTML += `<div class="ruleta-item" id="rItem-${i}"><img src="${j.foto}"><span>${j.nombre}</span></div>`;
+                    }
+                    track.innerHTML = itemsHTML;
+                    
+                    track.getBoundingClientRect(); 
+                    await new Promise(r => requestAnimationFrame(r));
+                    await new Promise(r => requestAnimationFrame(r));
+
+                    const anchoContenedor = contenedor.offsetWidth || window.innerWidth * 0.9; 
+                    const centroDelContenedor = anchoContenedor / 2;
+                    const offsetAlCentro = centroDelContenedor - (itemWidth / 2);
+                    
+                    const offsetAleatorio = Math.floor(Math.random() * 150) - 75; 
+                    const distanciaFinal = -((winnerIndex * itemWidth) - offsetAlCentro + offsetAleatorio);
+
+                    track.style.transition = 'transform 6.5s cubic-bezier(0.1, 0.85, 0.1, 1)';
+                    track.style.transform = `translateX(${distanciaFinal}px)`;
+                    
+                    let ticks = setInterval(playTick, 250);
+                    setTimeout(() => clearInterval(ticks), 5500);
+
+                    await sleep(6600); 
+
+                    let winnerElement = document.getElementById(`rItem-${winnerIndex}`);
+                    if(winnerElement) winnerElement.classList.add('ganador');
+                    playFanfare();
+                    
+                    await sleep(2500); 
+                    resolve();
+                } catch(error) {
+                    console.error("Error en animación", error);
+                    resolve(); 
+                }
+            });
+        }
+
+        window.ejecutarSorteoRondaRuleta = async function(jugadoresParaSortear, nombreFase) {
+            let mezclados = [...jugadoresParaSortear].sort(() => Math.random() - 0.5);
+            
+            if(mezclados.length % 2 !== 0) {
+                mezclados.push({ id: 'libre', nombre: 'LIBRE (Avanza)', categoria: 'Amateur', foto: generarAvatarBillar('L'), claseColor: 'bg-amateur', esLibre: true });
+            }
+
+            let partidosNuevos = [];
+            let tiemposMesas = [window.ultimaHoraGlobal, window.ultimaHoraGlobal, window.ultimaHoraGlobal, window.ultimaHoraGlobal, window.ultimaHoraGlobal];
+
+            for(let i=0; i < mezclados.length; i+=2) {
+                let j1 = mezclados[i];
+                let j2 = mezclados[i+1];
+                let mesaIndex = (i/2) % 5;
+                let mesaNumero = mesaIndex + 1;
+                
+                let partido = { j1: j1, j2: j2, s1: 0, s2: 0, jugado: false, ganador: null, horaInt: tiemposMesas[mesaIndex], mesa: mesaNumero };
+
+                if(j2.esLibre) {
+                    partido.jugado = true; partido.ganador = j1;
+                    partido.s1 = '-'; partido.s2 = '-';
+                }
+                partidosNuevos.push(partido);
+                tiemposMesas[mesaIndex] = sumarMinutos(tiemposMesas[mesaIndex], 45);
+            }
+
+            let maxMinutos = 0;
+            tiemposMesas.forEach(t => { let min = obtenerMinutos(t); if(min > maxMinutos) { maxMinutos = min; window.ultimaHoraGlobal = t; }});
+
+            window.faseEliminacion.rondas.push({ partidos: partidosNuevos });
+            window.faseEliminacion.rondaActiva = window.faseEliminacion.rondas.length - 1;
+            await guardarEstadoTorneo();
+            renderizarFaseFinal();
+
+            const cine = document.getElementById('ruletaSorteo');
+            const logContainer = document.getElementById('ruletaLog');
+            
+            logContainer.innerHTML = '';
+            cine.style.display = 'flex';
+            
+            let maxAnimaciones = mezclados.length / 2;
+
+            for(let i=0; i < partidosNuevos.length; i++) {
+                let partido = partidosNuevos[i];
+                let j1 = partido.j1;
+                let j2 = partido.j2;
+                let mesaNumero = partido.mesa;
+
+                if(i < maxAnimaciones) {
+                    if(j2.esLibre) {
+                        document.getElementById('ruletaMesa').innerHTML = `${nombreFase} <br><span style="font-size:22px; color:#0be881;">🎁 SORTEO DE PASE DIRECTO (BYE)</span>`;
+                        let poolRestante = mezclados.slice(i * 2).filter(x => !x.esLibre);
+                        await animarRuleta("Sorteando al afortunado (Avanza sin jugar)...", j1, poolRestante);
+                        
+                        let htmlLog = `
+                            <div class="ruleta-log-item" style="border-left-color: #0be881; border-color: #0be881;">
+                                <div class="log-mesa-tag" style="color: #0be881;">LIBRE</div>
+                                <div class="log-player"><img src="${j1.foto}"> <span style="color: #0be881;">${j1.nombre}</span></div>
+                                <div class="log-vs" style="color: #0be881;">►</div>
+                                <div class="log-player right"><span style="color:#0be881;">AVANZA</span> <img src="${j2.foto}"></div>
+                            </div>
+                        `;
+                        logContainer.insertAdjacentHTML('beforeend', htmlLog);
+                        logContainer.scrollTop = logContainer.scrollHeight;
+
+                        document.getElementById('ruletaSub').textContent = `¡Pase directo asignado! Siguiente...`;
+                        await sleep(2000);
+                    } else {
+                        document.getElementById('ruletaMesa').innerHTML = `${nombreFase} - MESA ${mesaNumero} <br><span style="font-size:22px; color:#fff;">🕒 ${formatoAMPM(partido.horaInt)}</span>`;
+                        
+                        let poolRestanteJ1 = mezclados.slice(i * 2).filter(x => !x.esLibre);
+                        await animarRuleta("Sorteando Primer Jugador...", j1, poolRestanteJ1);
+                        
+                        let poolRestanteJ2 = mezclados.slice((i * 2) + 1).filter(x => !x.esLibre);
+                        await animarRuleta("Sorteando al Rival...", j2, poolRestanteJ2);
+                        
+                        let htmlLog = `
+                            <div class="ruleta-log-item">
+                                <div class="log-mesa-tag">MESA ${mesaNumero}</div>
+                                <div class="log-player"><img src="${j1.foto}"> <span>${j1.nombre}</span></div>
+                                <div class="log-vs">VS</div>
+                                <div class="log-player right"><span>${j2.nombre}</span> <img src="${j2.foto}"></div>
+                            </div>
+                        `;
+                        logContainer.insertAdjacentHTML('beforeend', htmlLog);
+                        logContainer.scrollTop = logContainer.scrollHeight;
+
+                        document.getElementById('ruletaSub').textContent = `¡Partido fijado! Siguiente...`;
+                        await sleep(1500);
+                    }
+                }
+            }
+
+            document.getElementById('ruletaMesa').innerHTML = `¡SORTEO FINALIZADO! 🎱`;
+            document.getElementById('ruletaSub').textContent = `Las mesas están en el tablero inferior. ¡Que gane el mejor!`;
+            
+            await sleep(5000); 
+            cine.style.display = 'none';
+
+            document.getElementById('btnSiguienteRonda').style.display = 'none';
+            cambiarPestana('finales', document.getElementById('tab-finales'));
+        };
+
+        document.getElementById('btnSorteo').addEventListener('click', async () => {
+            if(window.torneoActivo) {
+                alert("⚠️ Ya hay un torneo en curso. Debes finalizar el actual con el botón rojo de administrador antes de iniciar uno nuevo.");
+                return;
+            }
+
+            const password = prompt("Ingrese clave de administrador:");
+            if (password !== "2026*") { alert("❌ Clave incorrecta."); return; }
+
+            const jugadoresAptos = window.inscritosGlobal.filter(j => j.pagado === true);
+            if (jugadoresAptos.length < 4) { alert(`Mínimo 4 jugadores pagados para iniciar.`); return; }
+            
+            window.tipoTorneo = document.getElementById('tipoTorneoConfig').value;
+            let msg = window.tipoTorneo === 'clasico' ? "Fase de Grupos" : "MATA MATA (Eliminación Directa)";
+
+            if (confirm(`Se iniciará la RULETA EN VIVO: ${msg} con ${jugadoresAptos.length} jugadores.\n¿Proyectar en pantalla gigante?`)) {
+                window.torneoActivo = true; 
+                window.premiacion.primero = document.getElementById('inPremio1').value || "Trofeo y Efectivo";
+                window.premiacion.segundo = document.getElementById('inPremio2').value || "Efectivo";
+                window.ultimaHoraGlobal = document.getElementById('horaInicio').value; 
+                window.grupos = []; window.faseEliminacion = { rondas: [], rondaActiva: 0, campeon: null };
+
+                await guardarEstadoTorneo();
+
+                document.getElementById('panelConfiguracion').style.display = 'none';
+                document.getElementById('btnTerminarTorneo').style.display = 'inline-block';
+                mostrarPremiacion();
+
+                if(window.tipoTorneo === 'clasico') {
+                    let mezclados = [...jugadoresAptos].sort(() => Math.random() - 0.5);
+                    let tiemposMesas = [window.ultimaHoraGlobal, window.ultimaHoraGlobal, window.ultimaHoraGlobal, window.ultimaHoraGlobal, window.ultimaHoraGlobal];
+                    
+                    for (let i = 0; i < mezclados.length; i += 4) {
+                        let gIdx = i / 4; let p = mezclados.slice(i, i + 4).map(j => ({ ...j, pts: 0, car: 0, pj: 0 }));
+                        let mesaIndex = gIdx % 5; let mesaNumero = mesaIndex + 1;
+                        let nombreGrupo = `GRUPO ${String.fromCharCode(65 + gIdx)}`;
+
+                        let partidosGrupo = [];
+                        if(p.length >= 2) partidosGrupo.push({ j1: p[0], j2: p[1], s1: '', s2: '', jugado: false });
+                        if(p.length >= 3) partidosGrupo.push({ j1: p[0], j2: p[2], s1: '', s2: '', jugado: false }, { j1: p[1], j2: p[2], s1: '', s2: '', jugado: false });
+                        if(p.length === 4) { partidosGrupo = [ { j1: p[0], j2: p[1], s1: '', s2: '', jugado: false }, { j1: p[2], j2: p[3], s1: '', s2: '', jugado: false }, { j1: p[0], j2: p[2], s1: '', s2: '', jugado: false }, { j1: p[1], j2: p[3], s1: '', s2: '', jugado: false }, { j1: p[0], j2: p[3], s1: '', s2: '', jugado: false }, { j1: p[1], j2: p[2], s1: '', s2: '', jugado: false } ]; }
+                        
+                        partidosGrupo.forEach(partido => {
+                            partido.horaInt = tiemposMesas[mesaIndex]; partido.mesa = mesaNumero; 
+                            tiemposMesas[mesaIndex] = sumarMinutos(tiemposMesas[mesaIndex], 45);
+                        });
+                        window.grupos.push({ nombre: nombreGrupo, participantes: p, partidos: partidosGrupo });
+                    }
+                    
+                    let maxMin = 0; tiemposMesas.forEach(t => { let min = obtenerMinutos(t); if(min > maxMin) { maxMin = min; window.ultimaHoraGlobal = t; }});
+                    
+                    await guardarEstadoTorneo();
+                    renderizarGrupos();
+
+                    const cine = document.getElementById('ruletaSorteo'); 
+                    const logContainer = document.getElementById('ruletaLog');
+                    logContainer.innerHTML = ''; cine.style.display = 'flex';
+
+                    let maxAnimaciones = window.grupos.length; 
+                    
+                    for (let i = 0; i < maxAnimaciones; i++) {
+                        let grupo = window.grupos[i];
+                        let mesaNumero = grupo.partidos[0].mesa;
+                        let hora = grupo.partidos[0].horaInt;
+                        let p0 = grupo.participantes[0];
+                        let p1 = grupo.participantes[1];
+
+                        document.getElementById('ruletaMesa').innerHTML = `ASIGNANDO MESA ${mesaNumero} <br><span style="font-size:20px; color:#fff;">${grupo.nombre} | ${formatoAMPM(hora)}</span>`;
+                        
+                        let poolRestanteJ1 = mezclados.slice(i * 4);
+                        await animarRuleta("Sorteando Cabeza de Serie...", p0, poolRestanteJ1);
+                        
+                        let poolRestanteJ2 = mezclados.slice((i * 4) + 1);
+                        await animarRuleta("Sorteando Rival...", p1, poolRestanteJ2);
+                        
+                        let htmlLog = `
+                            <div class="ruleta-log-item">
+                                <div class="log-mesa-tag">MESA ${mesaNumero}</div>
+                                <div class="log-player"><img src="${p0.foto}"> <span>${p0.nombre}</span></div>
+                                <div class="log-vs">VS</div>
+                                <div class="log-player right"><span>${p1.nombre}</span> <img src="${p1.foto}"></div>
+                            </div>
+                        `;
+                        logContainer.insertAdjacentHTML('beforeend', htmlLog);
+                        logContainer.scrollTop = logContainer.scrollHeight;
+
+                        document.getElementById('ruletaSub').textContent = `¡Grupo anotado! Siguiente...`;
+                        await sleep(1500);
+                    }
+
+                    document.getElementById('ruletaMesa').innerHTML = `¡SORTEO FINALIZADO! 🎱`; document.getElementById('ruletaSub').textContent = `Los grupos están asignados.`; 
+                    await sleep(4000); cine.style.display = 'none';
+                    
+                    document.getElementById('btnGenerarFinales').style.display = 'block';
+
+                } else {
+                    document.getElementById('contenedorGrupos').innerHTML = '<h3 style="color:#aaa;">Modo MATA MATA Activo. El torneo se desarrolla en la pestaña de Gran Final.</h3>';
+                    await ejecutarSorteoRondaRuleta(jugadoresAptos, "RONDA 1");
+                }
+            }
+        });
+
+        window.generarFaseFinal = async function() {
+            let clasificados = [];
+            window.grupos.forEach(grupo => {
+                if(grupo.participantes[0]) clasificados.push(grupo.participantes[0]);
+                if(grupo.participantes[1]) clasificados.push(grupo.participantes[1]);
+            });
+
+            if(clasificados.length < 2) { alert("Mínimo 2 clasificados requeridos."); return; }
+            if(!confirm("¿Iniciar Fase Final? Se realizará el sorteo en ruleta.")) return;
+            
+            document.getElementById('btnGenerarFinales').style.display = 'none';
+            await ejecutarSorteoRondaRuleta(clasificados, "ELIMINATORIA");
+        };
+
+        window.sortearSiguienteRonda = async function() {
+            const password = prompt("Ingrese clave para sortear la siguiente fase:");
+            if (password !== "2026*") { alert("❌ Clave incorrecta."); return; }
+            
+            let ultimaRonda = window.faseEliminacion.rondas[window.faseEliminacion.rondaActiva].partidos;
+            let ganadores = ultimaRonda.map(p => p.ganador).filter(g => g !== null && !g.esLibre);
+            
+            if(ganadores.length < 2) { alert("No hay suficientes ganadores."); return; }
+            
+            let titulo = ganadores.length === 2 ? "GRAN FINAL" : (ganadores.length <= 4 ? "SEMIFINAL" : "ELIMINATORIA");
+            await ejecutarSorteoRondaRuleta(ganadores, titulo);
+        }
+
+        function mostrarPremiacion() {
+            if(window.premiacion.primero !== "") {
+                document.getElementById('placaPremiacion').style.display = 'block';
+                document.getElementById('txtPremio1').textContent = window.premiacion.primero;
+                document.getElementById('txtPremio2').textContent = window.premiacion.segundo;
+            }
+        }
+
+        // --- SISTEMA DE CORRECCIÓN ---
+        window.revertirMarcadorGrupo = async function(gIdx, pIdx) {
+            const password = prompt("Seguridad del Sistema:\nIngrese clave de administrador para corregir el marcador:");
+            if (password !== "2026*") { alert("❌ Clave incorrecta."); return; }
+
+            const grupo = window.grupos[gIdx];
+            const partido = grupo.partidos[pIdx];
+
+            if(!partido.jugado) return;
+
+            let j1 = grupo.participantes.find(p => p.id === partido.j1.id);
+            let j2 = grupo.participantes.find(p => p.id === partido.j2.id);
+
+            j1.car -= partido.s1; j1.pj -= 1;
+            j2.car -= partido.s2; j2.pj -= 1;
+
+            if (partido.s1 === 0 && partido.s2 === 0) {
+            } else if (partido.s1 > partido.s2) j1.pts -= 3;
+            else if (partido.s2 > partido.s1) j2.pts -= 3;
+            else { j1.pts -= 1; j2.pts -= 1; }
+
+            partido.jugado = false;
+            partido.s1 = '';
+            partido.s2 = '';
+
+            grupo.participantes.sort((a, b) => b.pts - a.pts || b.car - a.car);
+            renderizarGrupos();
+            await guardarEstadoTorneo();
+        };
+
+        window.revertirMarcadorFinal = async function(rIdx, pIdx) {
+            const password = prompt("Seguridad del Sistema:\nIngrese clave de administrador para corregir el marcador:");
+            if (password !== "2026*") { alert("❌ Clave incorrecta."); return; }
+
+            if (rIdx < window.faseEliminacion.rondas.length - 1) {
+                if(!confirm("⚠️ ATENCIÓN: Estás modificando una ronda anterior. Esto eliminará los sorteos de las rondas siguientes para recalcular el cuadro. ¿Continuar?")) return;
+                window.faseEliminacion.rondas.splice(rIdx + 1);
+                window.faseEliminacion.rondaActiva = rIdx;
+                window.faseEliminacion.campeon = null;
+            } else if (window.faseEliminacion.campeon) {
+                 window.faseEliminacion.campeon = null;
+            }
+
+            let partido = window.faseEliminacion.rondas[rIdx].partidos[pIdx];
+            partido.jugado = false;
+            partido.ganador = null;
+            partido.s1 = '';
+            partido.s2 = '';
+
+            renderizarFaseFinal();
+            await guardarEstadoTorneo();
+        };
+
+        // --- GUARDADO DE RESULTADOS ---
+        window.guardarResultadoGrupo = async function(gIdx, pIdx) {
+            const inputS1 = document.getElementById(`g${gIdx}p${pIdx}s1`).value;
+            const inputS2 = document.getElementById(`g${gIdx}p${pIdx}s2`).value;
+            const s1 = parseInt(inputS1) || 0;
+            const s2 = parseInt(inputS2) || 0;
+            
+            const grupo = window.grupos[gIdx]; const partido = grupo.partidos[pIdx];
+
+            if(partido.jugado) return;
+
+            if (s1 === 0 && s2 === 0) {
+                if(!confirm("⚠️ Ambos marcadores están en 0.\n¿Confirmas Doble W.O. (Ninguno sumará puntos)?")) return;
+            }
+
+            partido.s1 = s1; partido.s2 = s2; partido.jugado = true;
+
+            let j1 = grupo.participantes.find(p => p.id === partido.j1.id);
+            let j2 = grupo.participantes.find(p => p.id === partido.j2.id);
+            j1.car += s1; j1.pj += 1; j2.car += s2; j2.pj += 1;
+            
+            if (s1 === 0 && s2 === 0) {
+            } else if (s1 > s2) j1.pts += 3; 
+            else if (s2 > s1) j2.pts += 3; 
+            else { j1.pts += 1; j2.pts += 1; }
+
+            grupo.participantes.sort((a, b) => b.pts - a.pts || b.car - a.car);
+            renderizarGrupos(); await guardarEstadoTorneo();
+        };
+
+        window.guardarMarcadorFinal = async function(rIdx, pIdx) {
+            const inputS1 = document.getElementById(`f_r${rIdx}p${pIdx}s1`).value;
+            const inputS2 = document.getElementById(`f_r${rIdx}p${pIdx}s2`).value;
+            const s1 = parseInt(inputS1) || 0;
+            const s2 = parseInt(inputS2) || 0;
+            
+            if (s1 === 0 && s2 === 0) {
+                if(!confirm("⚠️ Ambos marcadores están en 0.\n¿Confirmas que AMBOS JUGADORES QUEDAN ELIMINADOS (Doble W.O.)?")) return;
+            } else if(s1 === s2) { 
+                alert("Sin empates en Muerte Súbita. Debe haber un ganador."); 
+                return; 
+            }
+
+            let partido = window.faseEliminacion.rondas[rIdx].partidos[pIdx];
+            partido.s1 = s1;
+            partido.s2 = s2;
+            partido.jugado = true;
+            
+            if (s1 === 0 && s2 === 0) {
+                partido.ganador = { id: 'doble_wo', nombre: '🚫 AMBOS ELIMINADOS', categoria: 'Amateur', foto: generarAvatarBillar('X'), claseColor: 'bg-amateur', esLibre: true };
+            } else {
+                partido.ganador = (s1 > s2) ? partido.j1 : partido.j2;
+            }
+
+            verificarAvanceRonda(rIdx); renderizarFaseFinal(); await guardarEstadoTorneo(); 
+        };
+
+        function verificarAvanceRonda(rIdx) {
+            let rondaActual = window.faseEliminacion.rondas[rIdx].partidos;
+            if(rondaActual.every(p => p.jugado)) {
+                if(rondaActual.length === 1) { 
+                    window.faseEliminacion.campeon = rondaActual[0].ganador;
+                    if(window.faseEliminacion.campeon && window.faseEliminacion.campeon.nombre === '🚫 AMBOS ELIMINADOS') {
+                        alert("Torneo finalizado sin campeón (Doble W.O. en la final).");
+                    } else {
+                        alert(`🎉 ¡CAMPEÓN: ${window.faseEliminacion.campeon.nombre}! 🎉`); 
+                    }
+                } else {
+                    document.getElementById('btnSiguienteRonda').style.display = 'inline-block';
+                }
+            } else {
+                document.getElementById('btnSiguienteRonda').style.display = 'none';
+            }
+        }
+
+        function renderizarGrupos() {
+            const contenedor = document.getElementById('contenedorGrupos'); contenedor.innerHTML = '';
+            window.grupos.forEach((grupo, gIdx) => {
+                let html = `<div class="grupo"><h3>${grupo.nombre}</h3><table class="tabla-posiciones" style="margin-bottom:15px; font-size: 12px;"><tr><th>Jugador</th><th>PJ</th><th>Pts</th><th>Car</th></tr>`;
+                grupo.participantes.forEach(p => { html += `<tr><td><img src="${p.foto}" class="avatar" style="width:20px;height:20px;"> ${p.nombre}</td><td>${p.pj}</td><td><strong>${p.pts}</strong></td><td>${p.car}</td></tr>`; });
+                html += `</table>`;
+
+                grupo.partidos.forEach((partido, pIdx) => {
+                    let horaFin = formatoAMPM(sumarMinutos(partido.horaInt, 45));
+                    let horaInicioAmPm = formatoAMPM(partido.horaInt);
+                    let metaJ1 = getMeta(partido.j1.categoria);
+                    let metaJ2 = getMeta(partido.j2.categoria);
+
+                    html += `<div class="mesa-billar">
+                        <div class="horario">MESA ${partido.mesa} | 🕒 ${horaInicioAmPm} - 🏁 ${horaFin}</div>
+                        <div style="margin-top: 15px;">
+                            <div class="jugador-mesa"><div class="jugador-info"><img src="${partido.j1?.foto || ''}" class="avatar">${partido.j1?.nombre || 'Jugador'}</div><span class="badge ${partido.j1?.claseColor || ''}">${metaJ1}</span></div>
+                            <div class="jugador-mesa"><div class="jugador-info"><img src="${partido.j2?.foto || ''}" class="avatar">${partido.j2?.nombre || 'Jugador'}</div><span class="badge ${partido.j2?.claseColor || ''}">${metaJ2}</span></div>
+                        </div>`;
+                    
+                    if(!partido.jugado) {
+                        html += `<div class="inputs-marcador"><input type="number" id="g${gIdx}p${pIdx}s1" class="input-score" placeholder="Pts"><input type="number" id="g${gIdx}p${pIdx}s2" class="input-score" placeholder="Pts"></div><button class="btn-guardar-score" onclick="guardarResultadoGrupo(${gIdx}, ${pIdx})">💾 Guardar Marcador</button>`;
+                    } else {
+                        html += `<div style="color: #ffd32a; font-size: 20px; font-weight: bold; margin-top: 10px;">${partido.s1} - ${partido.s2}</div>
+                                 <div style="display:flex; justify-content:center; gap:10px; align-items:center; margin-top: 5px;">
+                                     <div style="color: #05c46b; font-size: 12px;">Finalizado</div>
+                                     <button class="btn-corregir-score" onclick="revertirMarcadorGrupo(${gIdx}, ${pIdx})">✏️ Corregir</button>
+                                 </div>`;
+                    }
+                    html += `</div>`;
+                });
+                html += `</div>`; contenedor.innerHTML += html;
+            });
+        }
+
+        function renderizarFaseFinal() {
+            const contenedor = document.getElementById('contenedorFinales'); contenedor.innerHTML = '';
+            
+            if (window.faseEliminacion.campeon && window.faseEliminacion.campeon.nombre !== '🚫 AMBOS ELIMINADOS') {
+                document.getElementById('btnSiguienteRonda').style.display = 'none';
+                contenedor.innerHTML = `<div class="campeon-box">
+                    🏆 ¡GRAN CAMPEÓN DEL TORNEO! 🏆<br>
+                    <img src="${window.faseEliminacion.campeon.foto}" class="avatar" style="width:80px;height:80px;margin-top:15px;border:3px solid #000;">
+                    <br>${window.faseEliminacion.campeon.nombre}
+                </div>`;
+            }
+
+            window.faseEliminacion.rondas.forEach((rondaObj, rIdx) => {
+                let ronda = rondaObj.partidos;
+                let nombreRonda = ronda.length === 1 ? "🏆 GRAN FINAL" : `RONDA ${rIdx + 1}`;
+                let html = `<div style="width: 100%; margin-top: 20px; border-bottom: 2px solid #ff5e57;"><h2 style="color: #ff5e57;">${nombreRonda}</h2></div><div class="fase-grupos">`;
+
+                ronda.forEach((partido, pIdx) => {
+                    let horaFin = formatoAMPM(sumarMinutos(partido.horaInt, 45));
+                    let horaInicioAmPm = formatoAMPM(partido.horaInt);
+
+                    let metaJ1 = partido.j1 && !partido.j1.esLibre ? getMeta(partido.j1.categoria) : '';
+                    let metaJ2 = partido.j2 && !partido.j2.esLibre ? getMeta(partido.j2.categoria) : '';
+
+                    html += `<div class="mesa-billar" style="border-color: #ff3f34; max-width: 450px; margin: 0 auto 15px;">
+                        <div class="horario" style="background: #ff3f34; color: white; border: 1px solid #ff3f34; border-top: none;">MESA ${partido.mesa} | 🕒 ${horaInicioAmPm} - 🏁 ${horaFin}</div>
+                        <div style="margin-top: 15px;">
+                            <div class="jugador-mesa"><div class="jugador-info"><img src="${partido.j1?.foto || generarAvatarBillar('X')}" class="avatar">${partido.j1?.nombre || 'Esperando...'}</div><span class="badge ${partido.j1?.claseColor || ''}">${metaJ1}</span></div>
+                            <div style="color: #ff5e57; font-weight: bold; margin: 5px 0;">VS</div>
+                            <div class="jugador-mesa"><div class="jugador-info"><img src="${partido.j2?.foto || generarAvatarBillar('X')}" class="avatar">${partido.j2?.nombre || 'Esperando...'}</div><span class="badge ${partido.j2?.claseColor || ''}">${metaJ2}</span></div>
+                        </div>`;
+
+                    if(!partido.jugado) {
+                        if(partido.j1 && partido.j2 && partido.j1.nombre !== 'Esperando...' && partido.j2.nombre !== 'Esperando...') {
+                            html += `<div class="inputs-marcador"><input type="number" id="f_r${rIdx}p${pIdx}s1" class="input-score" placeholder="Pts"><input type="number" id="f_r${rIdx}p${pIdx}s2" class="input-score" placeholder="Pts"></div><button class="btn-guardar-score" style="background: linear-gradient(45deg, #ff3f34, #ff5e57);" onclick="guardarMarcadorFinal(${rIdx}, ${pIdx})">💾 Guardar y Avanzar</button>`;
+                        } else {
+                            html += `<div style="color: #aaa; margin-top:10px;">Esperando resultados anteriores...</div>`;
+                        }
+                    } else {
+                        html += `<div style="color: #ffd32a; font-size: 24px; font-weight: bold; margin-top: 15px;">${partido.s1} - ${partido.s2}</div>
+                                 <div style="display:flex; justify-content:center; gap:10px; align-items:center; margin-top: 5px;">`;
+                        
+                        if(partido.ganador && partido.ganador.nombre === '🚫 AMBOS ELIMINADOS') {
+                            html += `<div style="color: #ff3f34; font-size: 16px; background: rgba(0,0,0,0.5); padding: 5px; border-radius: 5px;">${partido.ganador.nombre}</div>`;
+                        } else {
+                            html += `<div style="color: #0be881; font-size: 16px; background: rgba(0,0,0,0.5); padding: 5px; border-radius: 5px;">⭐ Avanza: ${partido.ganador?.nombre || 'N/A'}</div>`;
+                        }
+
+                        html += `    <button class="btn-corregir-score" onclick="revertirMarcadorFinal(${rIdx}, ${pIdx})">✏️ Corregir</button>
+                                 </div>`;
+                    }
+                    html += `</div>`;
+                });
+                html += `</div>`; contenedor.innerHTML += html;
+            });
+            
+            let rondaActivaData = window.faseEliminacion.rondas[window.faseEliminacion.rondaActiva]?.partidos;
+            if(rondaActivaData && rondaActivaData.every(p => p.jugado) && !window.faseEliminacion.campeon) {
+                document.getElementById('btnSiguienteRonda').style.display = 'inline-block';
+            } else {
+                document.getElementById('btnSiguienteRonda').style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
